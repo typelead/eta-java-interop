@@ -21,7 +21,7 @@ import GHC.Base
 import GHC.Int
 import Java.Array
 import Java.Primitive
-import Java.IO
+import Interop.Java.IO
 import Java.Collections
 
 -- Start java.security.SecureRandom
@@ -63,14 +63,14 @@ data {-# CLASS "java.security.cert.Certificate" #-} Certificate = Certificate (O
 
 -- Start java.security.cert.CodeSigner
 
-data CodeSigner = CodeSigner (@java.security.cert.Certificate)
+data CodeSigner = CodeSigner @java.security.cert.Certificate
   deriving Class
 
 -- End java.security.CodeSigner
 
 -- Start java.security.Permission
 
-data Permission = Permission (@java.security.Permission)
+data Permission = Permission @java.security.Permission
   deriving Class
 
 foreign import java unsafe checkGuard :: Object -> Java Permission ()
@@ -85,14 +85,14 @@ foreign import java unsafe newPermissionCollection :: Java Permission Permission
 
 -- Start java.security.PermissionCollection
 
-data PermissionCollection = PermissionCollection (@java.security.PermissionCollection)
+data PermissionCollection = PermissionCollection @java.security.PermissionCollection
   deriving Class
 
 -- End java.security.PermissionCollection
 
 -- Start java.security.BasicPermission
 
-data BasicPermission = BasicPermission (@java.security.BasicPermission)
+data BasicPermission = BasicPermission @java.security.BasicPermission
   deriving Class
 
 type instance Inherits BasicPermission = '[Permission, Object]

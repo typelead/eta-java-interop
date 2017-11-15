@@ -23,7 +23,7 @@ import Java.Array
 import Java.Collections
 import Java.Primitive
 import Java.Utils
-import Java.Text
+import Interop.Java.Text
 
 -- Start java.util.Calendar
 

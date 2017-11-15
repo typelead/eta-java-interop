@@ -21,9 +21,9 @@ import GHC.Base
 import GHC.Int
 import Java.Array
 import Java.Primitive
-import Java.NIO
+import Interop.Java.NIO
 import Java.String
-import Java.Text
+import Interop.Java.Text
 
 data {-# CLASS "java.io.File[]" #-}
   FileArray = FileArray (Object# FileArray)

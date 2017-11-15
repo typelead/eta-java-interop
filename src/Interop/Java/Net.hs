@@ -21,7 +21,7 @@ import GHC.Base
 import GHC.Int
 import Java.Array
 import Java.Collections
-import Java.IO
+import Interop.Java.IO
 import Java.Primitive
 
 -- Start java.net.URL

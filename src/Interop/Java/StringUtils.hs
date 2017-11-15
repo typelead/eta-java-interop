@@ -16,15 +16,15 @@
 -----------------------------------------------------------------------------
 
 module Interop.Java.StringUtils
-  (module Java.StringUtils, CharSequence)
+  (module Interop.Java.StringUtils, CharSequence)
 where
 
 import GHC.Base
 import GHC.Int
 import Java.Array
 import Java.Core
-import Java.NIO
-import Java.Text
+import Interop.Java.NIO
+import Interop.Java.Text
 import Java.Primitive
 import Java.String
 
