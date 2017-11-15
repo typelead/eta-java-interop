@@ -63,7 +63,38 @@ data {-# CLASS "java.security.cert.Certificate" #-} Certificate = Certificate (O
 
 -- Start java.security.cert.CodeSigner
 
-data {-# CLASS "java.security.CodeSigner" #-} CodeSigner = CodeSigner (Object# CodeSigner)
+data CodeSigner = CodeSigner (@java.security.cert.Certificate)
   deriving Class
 
 -- End java.security.CodeSigner
+
+-- Start java.security.Permission
+
+data Permission = Permission (@java.security.Permission)
+  deriving Class
+
+foreign import java unsafe checkGuard :: Object -> Java Permission ()
+
+foreign import java unsafe getActions :: Java Permission JString
+
+foreign import java unsafe implies :: Permission -> Java Permission Bool
+
+foreign import java unsafe newPermissionCollection :: Java Permission PermissionCollection
+
+-- End java.security.Permission
+
+-- Start java.security.PermissionCollection
+
+data PermissionCollection = PermissionCollection (@java.security.PermissionCollection)
+  deriving Class
+
+-- End java.security.PermissionCollection
+
+-- Start java.security.BasicPermission
+
+data BasicPermission = BasicPermission (@java.security.BasicPermission)
+  deriving Class
+
+type instance Inherits BasicPermission = '[Permission, Object]
+
+-- End java.security.BasicPermission
