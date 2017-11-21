@@ -19,6 +19,7 @@ cabal-version:       >=1.10
 library
   exposed-modules:    Interop.Java.DateTime
                       Interop.Java.IO
+                      Interop.Java.Lang
                       Interop.Java.Net
                       Interop.Java.NIO
                       Interop.Java.Security
