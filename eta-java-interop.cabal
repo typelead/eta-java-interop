@@ -2,7 +2,7 @@
 -- documentation, see http://etlas.typelead.com/users-guide
 
 name:                eta-java-interop
-version:             0.1.2.0
+version:             0.1.3.0
 synopsis:            Utilities for interoperating with Java.
 description:         Utilities for interoperating with Java.
 license:             BSD3
@@ -24,6 +24,7 @@ library
                       Interop.Java.NIO
                       Interop.Java.Security
                       Interop.Java.StringUtils
+                      Interop.Java.System
                       Interop.Java.Text
   -- other-modules:
   -- other-extensions:
