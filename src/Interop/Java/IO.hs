@@ -465,6 +465,8 @@ data {-# CLASS "java.io.File" #-}
 
 type instance Inherits File = '[Object, (Comparable File)]
 
+foreign import java unsafe "@new" newFile :: String -> Java a File
+
 foreign import java unsafe canExecute :: Java File Bool
 
 foreign import java unsafe canRead :: Java File Bool
