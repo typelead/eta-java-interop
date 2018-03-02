@@ -1,7 +1,6 @@
 module Interop.Java.System where
 
 import Java
-import Interop.Java.IO
 
 foreign import java unsafe "@static java.lang.System.currentTimeMillis"
    currentTimeMillis :: Java a Int64
