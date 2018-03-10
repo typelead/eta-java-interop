@@ -35,4 +35,4 @@ library
 source-repository this
   type: git
   location: https://github.com/typelead/eta-java-interop
-  tag: 0.1.1.0
+  tag: 0.1.3.0
